@@ -2,7 +2,7 @@ package application;
 
 import java.util.Scanner;
 
-import entities.Boletim;
+import entities.Aluno;
 
 public class Main {
 
@@ -11,7 +11,7 @@ public class Main {
 
 		System.out.println("Nome do aluno: ");
 		String nome = scan.nextLine();
-		Boletim aluno = new Boletim(nome);
+		Aluno aluno = new Aluno(nome);
 
 		System.out.println("1° nota: ");
 		double nota1 = scan.nextDouble();
@@ -28,7 +28,7 @@ public class Main {
 			System.out.printf("Aluno %s foi APROVADO\nMedia: %.2f ", aluno.getNome(), aluno.getNotaFinal());
 		} else {
 			System.out.printf("Aluno %s foi REPROVADO\nMedia %.2f", aluno.getNome(), aluno.getNotaFinal());
-			System.out.println("\nNota negativa: " + (aluno.getNotaFinal() - 60));
+			System.out.printf("\nNota negativa: %.2f", (aluno.getNotaFinal() - 60));
 		}
 
 		scan.close();
